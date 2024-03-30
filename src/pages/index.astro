@@ -1,9 +1,30 @@
 ---
 import { getEntry } from "astro:content";
 import Navbar from "../components/navbar.astro";
+import "../base.css";
 ---
 
-<div class="h-screen flex items-center justify-center">graveside diy</div>
+<html>
+    <body>
+        <div
+            class="h-screen flex items-center justify-center font-rubikScribble text-center text-7xl md:text-9xl"
+        >
+            graveside diy
+        </div>
+
+        <script>
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
 
 <!-- <html>
     <div
