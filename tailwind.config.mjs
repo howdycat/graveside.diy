@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
             fontFamily: {
-                rubikScribble: ["Rubik Scribble", "sans-serif"],
+                elite: ["Special Elite", "sans-serif"],
             }
         },
 	},

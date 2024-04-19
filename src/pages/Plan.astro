@@ -1,0 +1,12 @@
+---
+import SiteShell from "../layouts/SiteShell.astro";
+import PlanStep from "../components/PlanStep.astro";
+
+let steps = await Astro.glob('./steps/*.md');
+---
+
+<section>
+    <div class="flex flex-col">
+        {steps.map((s) => <PlanStep step={s}/>)}
+    </div>
+</section>

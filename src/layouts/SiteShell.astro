@@ -1,0 +1,20 @@
+---
+const { title } = Astro.props;
+
+import Navbar from "../components/navbar.astro";
+import "../base.css";
+
+---
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div class="flex flex-col gap-5 min-h-screen container mx-auto lg:w-1/2 md:p-5 p-3">
+            <Navbar />
+            <div class="w-full">
+                <slot />
+            </div>
+        </div>
+    </body>
+</html>
