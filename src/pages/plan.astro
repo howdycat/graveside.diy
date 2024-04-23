@@ -1,0 +1,11 @@
+---
+import SiteShell from "../layouts/SiteShell.astro"
+import {marked} from 'marked';
+import * as planContent from '../content/pages/plan.md';
+
+---
+
+<SiteShell title="Plan">
+   
+    <div set:html={marked.parse(planContent.frontmatter.content)}></div>
+</SiteShell>
